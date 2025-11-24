@@ -2,9 +2,9 @@
 
 namespace LeetCodeChallenges.Problems._1768.MergeStringsAlternately;
 
-public class MergeStringsAlternately
+public static class MergeStringsAlternately
 {
-    public string MergeAlternately(string word1, string word2)
+    public static string MergeAlternately(string word1, string word2)
     {
         int max = Math.Max(word1.Length, word2.Length);
         var sb = new StringBuilder(word1.Length + word2.Length);
