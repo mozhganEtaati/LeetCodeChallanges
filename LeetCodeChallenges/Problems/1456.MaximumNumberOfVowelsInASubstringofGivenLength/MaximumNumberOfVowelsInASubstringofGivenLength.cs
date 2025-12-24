@@ -9,15 +9,16 @@ public static class MaximumNumberOfVowelsInASubstringofGivenLength
         int windowVowelCount = 0;
         int i = 0;
 
-        for (; i < k; i++)
+        while (i < k)
         {
-            if (IsVowel(s[i]))
+            if (IsVowel(s[i++]))
                 windowVowelCount++;
+
         }
 
         maxVowelCount = windowVowelCount;
 
-        for (; i < s.Length; i++)
+        while (i < s.Length)
         {
             if (IsVowel(s[i]))
                 windowVowelCount++;
@@ -25,6 +26,8 @@ public static class MaximumNumberOfVowelsInASubstringofGivenLength
                 windowVowelCount--;
             if (windowVowelCount > maxVowelCount)
                 maxVowelCount = windowVowelCount;
+
+            i++;
         }
 
         return maxVowelCount;
